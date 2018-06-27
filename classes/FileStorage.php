@@ -2,7 +2,7 @@
 
 require_once ('IStorage.php');
 
-class Storage implements IStorage {
+class FileStorage implements IStorage {
 
 	public function load($type, $target) {
 		// TODO: Implement load() method.

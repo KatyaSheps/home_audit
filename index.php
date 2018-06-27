@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: veatsly
- * Date: 27.06.2018
- * Time: 22:41
- */
+
+if (empty($_GET)) {
+	$categoryHandler = new CategoryHandler(new FileStorage());
+	$spendsHandler = new SpendsHandler(new FileStorage());
+
+}
