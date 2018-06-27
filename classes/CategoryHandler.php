@@ -8,6 +8,8 @@ class CategoryHandler extends Handler {
 		parent::__construct($storage);
 	}
 
-	public function getAllSpendsByMonth() {}
+	public function getCategoriesList() {
+
+	}
 
 }

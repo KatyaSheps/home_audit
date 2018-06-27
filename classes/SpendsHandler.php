@@ -8,4 +8,6 @@ class SpendsHandler extends Handler {
 		parent::__construct($storage);
 	}
 
+	public function getAllSpendsByMonth(array $categories) {}
+
 }
