@@ -2,7 +2,9 @@
 
 require_once (__DIR__ . '/vendor/autoload.php');
 
-use classes\FileStorage;
+function a($a) {
+	echo $a;
+}
 
-$fileStorage = new FileStorage();
-$fileStorage->load(\classes\IStorage::TYPE_CATEGORY);
+$b = 1;
+a($b);

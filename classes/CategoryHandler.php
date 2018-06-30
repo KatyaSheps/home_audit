@@ -6,18 +6,21 @@ use classes\models\Categories;
 
 class CategoryHandler extends Handler {
 
+	/**
+	 * @var $categories Categories
+	 */
+	private $categories;
+
 	public function __construct($storage) {
 		parent::__construct($storage);
-	}
-
-	public function getCategoriesList() {
 		/**
 		 * @var  $categories Categories
 		 */
-		$categories = $this->storage->load(IStorage::TYPE_CATEGORY);
-		$categoriesList = $categories->getActiveElementsByFieldName('title');
-		return $categoriesList;
+		$this->categories = $this->storage->load(IStorage::TYPE_CATEGORY);
+	}
 
+	public function getCategoriesList() {
+		return $this->categories->getActiveElementsByFieldName('title');
 	}
 
 }
