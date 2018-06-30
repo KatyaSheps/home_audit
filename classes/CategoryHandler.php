@@ -2,7 +2,7 @@
 
 namespace classes;
 
-require_once ('IStorage.php');
+use classes\models\Categories;
 
 class CategoryHandler extends Handler {
 
@@ -11,6 +11,12 @@ class CategoryHandler extends Handler {
 	}
 
 	public function getCategoriesList() {
+		/**
+		 * @var  $categories Categories
+		 */
+		$categories = $this->storage->load(IStorage::TYPE_CATEGORY);
+		$categoriesList = $categories->getActiveElementsByFieldName('title');
+		return $categoriesList;
 
 	}
 
