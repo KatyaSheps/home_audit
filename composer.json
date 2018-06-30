@@ -11,7 +11,8 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "classes\\": "classes/"
+      "classes\\": "classes/",
+      "classes\\models\\": "classes/models"
     }
   }
 }
