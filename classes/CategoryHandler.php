@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 require_once ('IStorage.php');
 
 class CategoryHandler extends Handler {

@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 class Handler {
 
 	protected $storage;

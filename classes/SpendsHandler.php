@@ -1,6 +1,6 @@
 <?php
 
-require_once ('IStorage.php');
+namespace classes;
 
 class SpendsHandler extends Handler {
 

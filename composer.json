@@ -1,0 +1,17 @@
+{
+  "name": "katyasheps/home-audit",
+  "license": "open",
+  "authors": [
+    {
+      "name": "Katya Sheps",
+      "email": "katya@sheps.ru"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "classes\\": "classes/"
+    }
+  }
+}
