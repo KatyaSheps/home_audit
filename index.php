@@ -11,9 +11,8 @@ use classes\View;
 if (empty($_GET)) {
 
 	$categoryHandler = new CategoryHandler(new FileStorage());
-
-
 	$categories = $categoryHandler->getCategoriesList();
+
 	$spendsByMonth = [];
 	foreach ($categories as $categoryId => $categoryName) {
 		$spendsHandler = new SpendsHandler(new FileStorage(), $categoryId);
@@ -21,9 +20,7 @@ if (empty($_GET)) {
 		$spendsByMonth[$categoryName] = $spendsSum;
 	}
 
-	var_dump($spendsByMonth);
-
-//	$view = new View();
-//	$view->render('index', $spendsByMonth);
+	$view = new View();
+	$view->render('index', $spendsByMonth);
 
 }
