@@ -6,10 +6,10 @@
 		<form>
 			С <input type="text" name="date_from"> по <input type="text" name="date_to"> по категории
 			<select>
-				<option value="1">Еда</option>
-				<option value="2">Одежда</option>
-				<option value="3">Проезд</option>
-				<option value="4">Жильё</option>
+				<option value="0">Все</option>
+                <?php foreach ($data['categories'] as $key => $value) { ?>
+                    <option value="<?= $key ?>"><?= $value ?></option>
+                <?php } ?>
 			</select>
 			<input type="submit" value="Смотреть">
 		</form>
@@ -18,7 +18,7 @@
 <tr>
 	<td colspan="2">
 		<h2>Сумма трат по категориям за последние 30 дней</h2>
-        <?php foreach ($data as $key => $value) { ?>
+        <?php foreach ($data['spends'] as $key => $value) { ?>
 		<p><?= $key ?> — <?php if (is_null($value)) { ?> <i>нет трат</i> <?php } else { ?><b><?= $value; ?> рублей</b><?php } ?></p>
         <?php } ?>
 		<hr width="100%">
@@ -44,10 +44,9 @@
 				<td>Категория</td>
 				<td>
 					<select>
-						<option value="1">Еда</option>
-						<option value="2">Одежда</option>
-						<option value="3">Проезд</option>
-						<option value="4">Жильё</option>
+						<?php foreach ($data['categories'] as $key => $value) { ?>
+                            <option value="<?= $key ?>"><?= $value ?></option>
+						<?php } ?>
 					</select>
 				</td>
 			</tr>

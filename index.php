@@ -21,6 +21,6 @@ if (empty($_GET)) {
 	}
 
 	$view = new View();
-	$view->render('index', $spendsByMonth);
+	$view->render('index', ['categories' => $categories, 'spends' => $spendsByMonth]);
 
 }
